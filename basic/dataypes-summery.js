@@ -31,4 +31,30 @@ console.log(xyz())
 console.log(funVar())
 console.log(typeof funVar) // function : object function
 console.log(typeof myObj) // Object
-console.log(typeof arrayValue) // Object : 
+console.log(typeof arrayValue) // Object
+
+// ******************************* Memory ************************
+
+// Stack(All primitive types) : we get a copy
+// Heap (All non primitive) : we get a referency to memory
+
+let firstName = "Abhishek"
+let anotherName = firstName
+
+console.log(firstName);
+console.log(anotherName)
+
+anotherName = "Tony"
+console.log(firstName);
+console.log(anotherName)
+
+// Heap
+let userOne = {
+    email : "tony",
+    age : 21
+}
+
+let userTwo = userOne // They point to same reference in memory
+userTwo.age = 27
+console.log(userOne.age);
+console.log(userTwo.age)
