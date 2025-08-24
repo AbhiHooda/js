@@ -39,3 +39,27 @@ console.log(loginMessage("hi", "hello"));
 
 // JavaScript processes function declarations in a separate initialization phase, before it starts running your code.
 
+function calculatePrice(...nums) { // here ... is rest operator or spread in other cases
+    // nums will be array
+    let result = 0
+    for(let i = 0; i < nums.length; i++) {
+        result += nums[i]
+    }
+    return result
+}
+
+console.log(calculatePrice(100));
+console.log(calculatePrice(100, 200));
+
+
+const user = {
+    name : "Abhi"
+}
+
+// type saftey is required
+function handlingObject(obj) {
+    console.log(`user is ${obj.name}`);    
+}
+
+handlingObject(user)
+
